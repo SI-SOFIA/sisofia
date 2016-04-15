@@ -38,12 +38,15 @@
 
 	<div class="col-sm-offset-1 col-sm-4 bg-fade-orange side-box">
 		
-			<p class="large text-muted"> Your Booking </p>
-			<img src="img/portfolio/treehouse.png" class="img-responsive" alt="">
-			<p class="large">Room Name</p>
-			Description <br />
-			Price <br />
-
+			<h3> Your Booking </h3>
+			<img src="img/room/single.png" class="img-responsive" alt="">
+			<br /><b>Room Type : Single </b>
+			<br /> <br /> <b>Description </b><br /> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia minuti firme desperantes vix sempiternum sentiri possunt, philosophia permanentes, sentit careret.
+			<br /><br /><b>Quantity</b> : 1 <br />
+			<br /><b>Check in</b> : 04/17/2016 <br />
+			<br /><b>Check out</b> : 04/20/2016 <br />
+			<hr>
+			<h3>TOTAL : Rp 600.000,- </h3><br />
 
 		</div>
 	</div>

@@ -8,49 +8,39 @@
 	</div>
 	<div class="row">
 	
-	<div class="col-sm-offset-2 col-sm-8 bg-fade-orange center-box">
+	<div class="col-sm-offset-3 col-sm-6 bg-fade-orange center-box">
 		<div class = "row">
-		<p class="large text-muted"> Booking No </p>
+		<p class="large text-muted"> Booking No. 1 </p>
 		<table class="table-condensed">
 			<tr>
-				<td> Name </td>
+				<td> <b>Name</b> </td>
 				<td> : </td>
 				<td> Jessica Handayani </td>
 			</tr>
 			<tr>
-				<td> Telephone </td>
+				<td> <b>Telephone</b> </td>
 				<td> : </td>
 				<td> +6281287156165 </td>
 			</tr>
 			<tr>
-				<td> Address </td>
+				<td> <b>Address</b> </td>
 				<td> : </td>
-				<td> Syubidam falalalalalala </td>
+				<td> Jalan Cisitu Indah V </td>
 			</tr>
 			<tr>
-				<td> Booking Detail </td>
+				<td> <b>Booking Detail </b></td>
 				<td> : </td>
 				<td>  </td>
 			</tr>
 			</table>
-		</div>
-		<div class="row">
-			<table class="table-condensed">
-				<tr>
-					<td rowspan="3">
-						<img src="img/portfolio/treehouse.png" class="img-responsive" alt="">
-					</td>
-					<td><p class="large">Room Name</p></td>
-				</tr>
-				<tr>
-					<td> Description </td>
-				</tr>
-				<tr>
-					<td> Price </td>
-				</tr>
-			</table>
 
-			</div>
+			<img src="img/room/single.png" class="img-responsive" alt="">
+			<br /><b>Room Type</b> : Single
+			<br /><br /><b>Quantity</b> : 1 <br />
+			<br /><b>Check in</b> : 04/17/2016 <br />
+			<br /><b>Check out</b> : 04/20/2016 <br />
+			<br /><b>Total</b> : Rp 600.000,- <br />
+			<br /><b>Status</b> : Confirmed, Not Yet Validated <br />
 		</div>
 	</div>
 </div>

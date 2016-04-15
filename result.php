@@ -51,20 +51,85 @@
     	echo '<form name="book" method="post" action="processbooking.php">';
     	echo '<div class="row">';
     		echo '<div class="col-sm-3">';
-    			echo 'Picture';
+    			echo '<img src="img/room/single.png" class="img-responsive" alt="">';
     		echo '</div>';
     		echo '<div class="col-sm-4">';
-    			echo 'Room Name <br />';
-    			echo 'Description <br />';
+    			echo '<p><label> SINGLE </label></p>';
+    			echo '<b>Description </b><br /> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia minuti firme desperantes vix sempiternum sentiri possunt, philosophia permanentes, sentit careret.';
     		echo '</div>';
     		echo '<div class="col-sm-3">';
     			//use jquery to update price
-    			echo 'Price <br />';
-    			echo 'Quantity <br />';
+    			echo ' <br /> <br /><b>Price</b> <br /> Rp 200.000,-/night<br /><br />';
+    			echo '<b>Quantity</b> <br />';
+    			echo '<select>
+    				<option value="1"> 1 </option>
+    				<option value="1"> 2 </option>
+    				<option value="1"> 3 </option>
+    				<option value="1"> 4 </option>
+    				<option value="1"> 5 </option>
+    				</select>';
     		echo '</div>';
     		echo '<div class="col-sm-2">';
     			//processbooking
-    			echo '<button type="submit" class="btn btn-m" name="book"> Book </button>';
+    			echo ' <br /> <br /><button type="submit" class="btn btn-m" name="book"> Book </button>';
+    		echo '</div>';
+    	echo '</div>';
+    	echo '</form>';
+    	echo '<hr>';
+
+    	    	echo '<form name="book" method="post" action="processbooking.php">';
+    	echo '<div class="row">';
+    		echo '<div class="col-sm-3">';
+    			echo '<img src="img/room/double.png" class="img-responsive" alt="">';
+    		echo '</div>';
+    		echo '<div class="col-sm-4">';
+    			echo '<p><label> DOUBLE </label></p>';
+    			echo '<b>Description </b><br /> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia minuti firme desperantes vix sempiternum sentiri possunt, philosophia permanentes, sentit careret.';
+    		echo '</div>';
+    		echo '<div class="col-sm-3">';
+    			//use jquery to update price
+    			echo ' <br /> <br /><b>Price</b> <br /> Rp 400.000,-/night<br /><br />';
+    			echo '<b>Quantity</b> <br />';
+    			echo '<select>
+    				<option value="1"> 1 </option>
+    				<option value="1"> 2 </option>
+    				<option value="1"> 3 </option>
+    				<option value="1"> 4 </option>
+    				<option value="1"> 5 </option>
+    				</select>';
+    		echo '</div>';
+    		echo '<div class="col-sm-2">';
+    			//processbooking
+    			echo ' <br /> <br /><button type="submit" class="btn btn-m" name="book"> Book </button>';
+    		echo '</div>';
+    	echo '</div>';
+    	echo '</form>';
+    	echo '<hr>';
+
+    	    	echo '<form name="book" method="post" action="processbooking.php">';
+    	echo '<div class="row">';
+    		echo '<div class="col-sm-3">';
+    			echo '<img src="img/room/executive.png" class="img-responsive" alt="">';
+    		echo '</div>';
+    		echo '<div class="col-sm-4">';
+    			echo '<p><label> EXECUTIVE </label></p>';
+    			echo '<b>Description </b><br /> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia minuti firme desperantes vix sempiternum sentiri possunt, philosophia permanentes, sentit careret.';
+    		echo '</div>';
+    		echo '<div class="col-sm-3">';
+    			//use jquery to update price
+    			echo ' <br /> <br /><b>Price</b> <br /> Rp 600.000,-/night<br /><br />';
+    			echo '<b>Quantity</b> <br />';
+    			echo '<select>
+    				<option value="1"> 1 </option>
+    				<option value="1"> 2 </option>
+    				<option value="1"> 3 </option>
+    				<option value="1"> 4 </option>
+    				<option value="1"> 5 </option>
+    				</select>';
+    		echo '</div>';
+    		echo '<div class="col-sm-2">';
+    			//processbooking
+    			echo ' <br /> <br /><button type="submit" class="btn btn-m" name="book"> Book </button>';
     		echo '</div>';
     	echo '</div>';
     	echo '</form>';
