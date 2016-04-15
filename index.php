@@ -65,7 +65,7 @@
             </div>
             <hr>
             <div class="row">
-                <form name="bookingdetail" action="bookingdetail.php" method="post">
+                <form name="bookingdetail" action="bookingdetail.php" method="get">
                     <div class="col-sm-12 text-center">
                         <h3 class="section-sub-subheading text-muted">Check Your Booking</h3>
                     </div>

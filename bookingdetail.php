@@ -8,39 +8,12 @@
 	</div>
 	<div class="row">
 	
-	<div class="col-sm-offset-3 col-sm-6 bg-fade-orange center-box">
+	<div class="col-sm-offset-2 col-sm-8 bg-fade-orange center-box">
 		<div class = "row">
-		<p class="large text-muted"> Booking No. 1 </p>
-		<table class="table-condensed">
-			<tr>
-				<td> <b>Name</b> </td>
-				<td> : </td>
-				<td> Jessica Handayani </td>
-			</tr>
-			<tr>
-				<td> <b>Telephone</b> </td>
-				<td> : </td>
-				<td> +6281287156165 </td>
-			</tr>
-			<tr>
-				<td> <b>Address</b> </td>
-				<td> : </td>
-				<td> Jalan Cisitu Indah V </td>
-			</tr>
-			<tr>
-				<td> <b>Booking Detail </b></td>
-				<td> : </td>
-				<td>  </td>
-			</tr>
-			</table>
-
-			<img src="img/room/single.png" class="img-responsive" alt="">
-			<br /><b>Room Type</b> : Single
-			<br /><br /><b>Quantity</b> : 1 <br />
-			<br /><b>Check in</b> : 04/17/2016 <br />
-			<br /><b>Check out</b> : 04/20/2016 <br />
-			<br /><b>Total</b> : Rp 600.000,- <br />
-			<br /><b>Status</b> : Confirmed, Not Yet Validated <br />
+		<p class="large text-muted"> Booking No </p>
+		<?php 
+        	include('requestBookingDetail.php');
+    	?>
 		</div>
 	</div>
 </div>
