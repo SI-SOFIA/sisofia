@@ -18,7 +18,7 @@
 						<td class="padding-20"> No. </td>
 						<td class="padding-20"> Booking No.</td>
 						<td class="padding-20"> Nominal </td>
-						<td class="padding-20"> Status </td>
+						<td colspan="2" class="padding-20"> Status </td>
 					</tr>
 				</thead>
 				<tbody>
@@ -32,7 +32,8 @@
 								echo '<td class="padding-20">'.$i.'</td>';
 								echo '<td class="padding-20">'.$row[1].'</td>';
 								echo '<td class="padding-20">'.$row[4].'</td>';
-								echo '<td class="padding-20"> Validate </td>';
+								echo '<td class="padding-20"> <a href=""> <i class="fa fa-remove text-danger"> </a></td>';
+								echo '<td class="padding-20"> <a href="validate.php?id='.$row[1].'"> <i class="fa fa-check text-success"> </a></td>';
 							echo '</tr>';
 							$i++;
 							

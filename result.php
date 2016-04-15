@@ -135,10 +135,8 @@
     	echo '</div>';
     	echo '</form>';
     	echo '<hr>';
-=======
-    <?php 
+
         include('requestKamar.php');
->>>>>>> 250381ef528b591a589e21a06ba3470728a710dd
     ?>
 
 </div>

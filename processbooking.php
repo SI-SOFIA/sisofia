@@ -43,7 +43,7 @@
 
 	<div class="col-sm-offset-1 col-sm-4 bg-fade-orange side-box">
 		
-<<<<<<< HEAD
+
 			<h3> Your Booking </h3>
 			<img src="img/room/single.png" class="img-responsive" alt="">
 			<br /><b>Room Type : Single </b>
@@ -53,14 +53,13 @@
 			<br /><b>Check out</b> : 04/20/2016 <br />
 			<hr>
 			<h3>TOTAL : Rp 600.000,- </h3><br />
-=======
+
 			<p class="large text-muted"> Your Booking </p>
 			<img src="<?PHP echo $_POST["imgsrc"] ?>" class="img-responsive" alt="">
 			<p class="large"><?php echo $_POST["jenisRuangan"] . " ( Ruang " . $_POST["idRuangan"] . " )" ?></p>
 			<?php echo $_POST["deskripsi"] ?> <br />
 			<?php echo "Total : Rp " . $_POST["hargaString"] . ",-" ?> <br />
 
->>>>>>> 250381ef528b591a589e21a06ba3470728a710dd
 
 		</div>
 	</div>
