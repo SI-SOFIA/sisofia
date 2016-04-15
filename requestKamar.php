@@ -22,27 +22,37 @@
 	if ($result->num_rows > 0) {
 	    // output data of each row
 	    while($row = $result->fetch_assoc()) {
-	        echo '<form name="book" method="post" action="processbooking.php">';
-			echo '<div class="row">';
-				echo '<div class="col-sm-3">';
-					echo '<img src="http://blog.laterooms.com/wp-content/uploads/2011/10/LuxuryUpgrade.jpg" width="240" height="150">';
-				echo '</div>';
-				echo '<div class="col-sm-4">';
-					echo 'Kamar '.$row["id_ruangan"].' <br />';
-					echo 'Jenis Kamar : '.$row["jenis_kamar"].' <br />';
-				echo '</div>';
-				echo '<div class="col-sm-3">';
-					//use jquery to update price
-					echo 'Harga : '.$row["harga_kamar"].' <br />';
-					echo 'Quantity <br />';
-				echo '</div>';
-				echo '<div class="col-sm-2">';
-					//processbooking
-					echo '<button type="submit" class="btn btn-m" name="book"> Book </button>';
-				echo '</div>';
-			echo '</div>';
-			echo '</form>';
-			echo '<hr>';
+
+	    	$jenisKamar = $row["jenis_kamar"];
+	    	$hargaKamar = $row["harga_kamar"];
+
+	    	$jenisKamar = ucfirst($jenisKamar);
+	    	$hargaKamar = number_format($hargaKamar, 0, ',', '.');
+
+			echo '<form name="book" method="post" action="processbooking.php">';
+	    	echo '<div class="row">';
+	    		echo '<div class="col-sm-3">';
+	    			echo '<img src="http://blog.laterooms.com/wp-content/uploads/2011/10/LuxuryUpgrade.jpg" width="240" height="150">';
+	    		echo '</div>';
+	    		echo '<div class="col-sm-4">';
+	    			echo '<p><label> '.$jenisKamar.' ( Room '.$row["id_ruangan"].' )</label></p>';
+	    			echo '<b>Description </b><br /> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia minuti firme desperantes vix sempiternum sentiri possunt, philosophia permanentes, sentit careret.';
+	    		echo '</div>';
+	    		echo '<div class="col-sm-3">';
+	    			//use jquery to update price
+	    			echo ' <br /> <br /><b>Price</b> <br /> Rp '.$hargaKamar.'/night<br /><br />';
+	    			echo '<b>Quantity</b> <br />';
+	    			echo '<select>
+	    				<option value="1"> 1 </option>
+	    				</select>';
+	    		echo '</div>';
+	    		echo '<div class="col-sm-2">';
+	    			//processbooking
+	    			echo ' <br /> <br /><button type="submit" class="btn btn-m" name="book"> Book </button>';
+	    		echo '</div>';
+	    	echo '</div>';
+	    	echo '</form>';
+	    	echo '<hr>';
 	    }
 	} else {
 	    echo "0 results";
