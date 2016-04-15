@@ -1,30 +1,47 @@
 <?php include('head.php'); ?>
 <?php include('minimalnavigation.php'); ?>
+<?php
+	$connect = mysql_connect("localhost","root","") or die ("Connection Error");
+	$selectdb = mysql_select_db("sofia", $connect);
+?>
 <div class="container">
 	<div class="text-center">
 	<hr><hr><hr>
 	<h2 class="section-heading"> Validate Payment Confirmation </h2>
 	<hr>
 	</div>
-	<div class="row">
 
-	<div class="col-sm-offset-3 col-sm-6">
-		<form name="validatepayment" method="post">
-			<div class="form-group">
-				<label>Booking No.</label>
-				<input type="text" class="form-control" name="bookingno">
-			</div>
-		<div class="form-group">
-			<label>Phone Number</label>
-			<input type="text" placeholder="Enter Phone Number Here.." class="form-control">
-		</div>		
-		<div class="form-group">
-			<label>Email Address</label>
-			<input type="text" placeholder="Enter Email Address Here.." class="form-control">
-		</div>
-		<button type="submit" name="register" class="btn btn-m">Submit</button>
-		</form>
+		<div class="row">
+			<table class="table-striped" style="margin:auto;">
+				<thead> 
+					<tr>
+						<td class="padding-20"> No. </td>
+						<td class="padding-20"> Booking No.</td>
+						<td class="padding-20"> Nominal </td>
+						<td class="padding-20"> Status </td>
+					</tr>
+				</thead>
+				<tbody>
+				<?php
+					$query = "SELECT * FROM `konfirmasi` WHERE `id_booking` in (SELECT `id` FROM `booking` WHERE `status`='pending')";
+					$data = mysql_query($query,$connect);
+					$i = 1;
+					if ($data){
+						while($row = mysql_fetch_array($data)){
+							echo '<tr>';
+								echo '<td class="padding-20">'.$i.'</td>';
+								echo '<td class="padding-20">'.$row[1].'</td>';
+								echo '<td class="padding-20">'.$row[4].'</td>';
+								echo '<td class="padding-20"> Validate </td>';
+							echo '</tr>';
+							$i++;
+							
+						}
+					}
+				?>
 
+				</tbody>
+			</table>
 	</div>
 </div>
 

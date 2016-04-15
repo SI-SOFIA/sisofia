@@ -1,5 +1,6 @@
 <?php include('head.php'); ?>
 <?php include('minimalnavigation.php'); ?>
+<?php include('inputUser.php'); ?>
 <div class="container">
 	<div class="text-center">
 	<hr><hr><hr>
@@ -8,6 +9,7 @@
 	</div>
 	<div class="row">
 	
+<<<<<<< HEAD
 	<div class="col-sm-offset-3 col-sm-6 bg-fade-orange center-box">
 
 			<table class="table-condensed">
@@ -42,6 +44,15 @@
 			<hr>
 			<h3>TOTAL : Rp 600.000,- </h3><br />
 
+=======
+	<div class="col-sm-offset-3 col-sm-6 bg-fade-orange side-box">
+			
+			<p class="large text-muted"> Hi <?php echo $_POST["namaDepanUser"] ?>, This is your booking </p>
+			<img src="<?php echo $_POST["imgsrc"] ?>" class="img-responsive" alt="" height="300" width="480">
+			<p class="large"><?php echo $_POST["jenisRuangan"] . " ( Ruang " . $_POST["idRuangan"] . " )" ?></p>
+			<?php echo $_POST["deskripsi"] ?> <br />
+			Rp <?php echo $_POST["hargaString"] ?>,- <br />
+>>>>>>> 250381ef528b591a589e21a06ba3470728a710dd
 
 			<button type="submit" name="register" class="btn btn-m">Confirm My Booking</button>
 		</div>
