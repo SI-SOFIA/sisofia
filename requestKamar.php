@@ -1,20 +1,10 @@
-<?php //include='database.php' ?>
 <?php
 
 	/*
 		select * from kamar where id_ruangan not in(select alokasi.id_ruangan from booking join alokasi on alokasi.id_booking = booking.id where (status = "paid" or status = "pending") and ((booking.tanggal_checkin <= '2016-04-14 00:00:00') or (booking.tanggal_checkout >= '2016-04-15 00:00:00')));
 	*/
-	$servername = "localhost";
-	$username = "root";
-	$password = "root";
-	$dbname = "sisofia";
 
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	// Check connection
-	if ($conn->connect_error) {
-	die("Connection failed: " . $conn->connect_error);
-	}
+	include('database.php');
 
 	$sql = "SELECT * FROM kamar WHERE id_ruangan NOT IN(SELECT alokasi.id_ruangan FROM booking JOIN alokasi ON alokasi.id_booking = booking.id WHERE (status = 'paid' OR status = 'pending') AND ((booking.tanggal_checkin <= '".$_GET["checkindate"]." 00:00:00') AND (booking.tanggal_checkout >= '".$_GET["checkoutdate"]." 00:00:00')));";
 	$result = $conn->query($sql);
@@ -72,4 +62,3 @@
 	$conn->close();
 
 ?>
-<?php //include='closedatabase.php' ?>

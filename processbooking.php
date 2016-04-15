@@ -11,27 +11,31 @@
 		<p class="large text-muted"> Your Personal Detail </p>
 		<form name="personaldetail" method="post" action="confirmbooking.php">
 		<?php echo '<input type="text" value="'.$_POST["idRuangan"].'" style="display:none;" name="idRuangan">' ?>
+		<?php echo '<input type="text" value="'.$_POST["jenisRuangan"].'" style="display:none;" name="jenisRuangan">' ?>
+		<?php echo '<input type="text" value="'.$_POST["deskripsi"].'" style="display:none;" name="deskripsi">' ?>
+		<?php echo '<input type="text" value="'.$_POST["hargaString"].'" style="display:none;" name="hargaString">' ?>
+		<?php echo '<input type="text" value="'.$_POST["imgsrc"].'" style="display:none;" name="imgsrc">' ?>
 		<div class="row">
 			<div class="col-sm-6 form-group">
 				<label>First Name</label>
-				<input type="text" placeholder="Enter First Name Here.." class="form-control">
+				<input type="text" placeholder="Enter First Name Here.." class="form-control" name="namaDepanUser">
 			</div>
 			<div class="col-sm-6 form-group">
 				<label>Last Name</label>
-				<input type="text" placeholder="Enter Last Name Here.." class="form-control">
+				<input type="text" placeholder="Enter Last Name Here.." class="form-control" name="namaBelakangUser">
 			</div>
 		</div>					
 		<div class="form-group">
 			<label>Address</label>
-			<textarea placeholder="Enter Address Here.." rows="3" class="form-control"></textarea>
+			<textarea placeholder="Enter Address Here.." rows="3" class="form-control" name="addressUser"></textarea>
 		</div>	
 		<div class="form-group">
 			<label>Phone Number</label>
-			<input type="text" placeholder="Enter Phone Number Here.." class="form-control">
+			<input type="text" placeholder="Enter Phone Number Here.." class="form-control" name="phoneUser">
 		</div>		
 		<div class="form-group">
 			<label>Email Address</label>
-			<input type="text" placeholder="Enter Email Address Here.." class="form-control">
+			<input type="text" placeholder="Enter Email Address Here.." class="form-control" name="emailUser">
 		</div>
 		<button type="submit" name="register" class="btn btn-m">Submit</button>
 		</form>
