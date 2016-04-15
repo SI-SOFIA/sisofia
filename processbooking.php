@@ -15,6 +15,9 @@
 		<?php echo '<input type="text" value="'.$_POST["deskripsi"].'" style="display:none;" name="deskripsi">' ?>
 		<?php echo '<input type="text" value="'.$_POST["hargaString"].'" style="display:none;" name="hargaString">' ?>
 		<?php echo '<input type="text" value="'.$_POST["imgsrc"].'" style="display:none;" name="imgsrc">' ?>
+		<?php echo '<input type="text" value="'.$_POST["hargaFloat"].'" style="display:none;" name="hargaFloat">' ?>
+		<?php echo '<input type="text" value="'.$_POST["checkin"].'" style="display:none;" name="checkin">' ?>
+		<?php echo '<input type="text" value="'.$_POST["checkout"].'" style="display:none;" name="checkout">' ?>
 		<div class="row">
 			<div class="col-sm-6 form-group">
 				<label>First Name</label>

@@ -15,6 +15,7 @@
 
 	    	$jenisKamar = $row["jenis_kamar"];
 	    	$hargaKamar = $row["harga_kamar"];
+	    	$hargaFloat = $hargaKamar;
 
 	    	$jenisKamar = ucfirst($jenisKamar);
 	    	$hargaKamar = number_format($hargaKamar, 0, ',', '.');
@@ -35,6 +36,9 @@
 	    			echo '<input type="text" value="'.$description.'" style="display:none;" name="deskripsi">';
 	    			echo '<input type="text" value="'.$hargaKamar.'" style="display:none;" name="hargaString">';
 	    			echo '<input type="text" value="'.$imgsrc.'" style="display:none;" name="imgsrc">';
+	    			echo '<input type="text" value="'.$hargaFloat.'" style="display:none;" name="hargaFloat">';
+	    			echo '<input type="text" value="'.$_GET["checkindate"].' 00:00:00" style="display:none;" name="checkin">';
+	    			echo '<input type="text" value="'.$_GET["checkoutdate"].' 00:00:00" style="display:none;" name="checkout">';
 
 	    			echo '<p><label> '.$jenisKamar.' ( Room '.$row["id_ruangan"].' )</label></p>';
 	    			echo '<b>Description </b><br /> '.$description;
@@ -59,6 +63,6 @@
 	    echo "0 results";
 	}
 
-	$conn->close();
+	include('closedatabase.php');
 
 ?>

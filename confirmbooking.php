@@ -1,6 +1,7 @@
 <?php include('head.php'); ?>
 <?php include('minimalnavigation.php'); ?>
-<?php include('inputUser.php'); ?>
+<?php include('inputUser.php'); 
+	  include('inputBooking.php'); ?>
 <div class="container">
 	<div class="text-center">
 	<hr><hr><hr>
@@ -17,7 +18,10 @@
 			<?php echo $_POST["deskripsi"] ?> <br />
 			Rp <?php echo $_POST["hargaString"] ?>,- <br />
 
-			<button type="submit" name="register" class="btn btn-m">Confirm My Booking</button>
+			<form>
+				<?php echo '<input type="text" value="'.$_POST["idRuangan"].'" style="display:none;" name="idRuangan">' ?>
+				<button type="submit" name="register" class="btn btn-m">Confirm My Booking</button>
+			</form>
 		</div>
 	</div>
 </div>
