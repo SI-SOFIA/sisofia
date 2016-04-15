@@ -27,7 +27,7 @@
             </div>
             <div class="row">
                 <form name="checkavailability" action="result.php" method="get">
-                    <div class="form-group col-md-offset-2 col-md-3">
+                    <div class="form-group col-md-offset-1 col-md-3">
                         Check In :
                         <div class='input-group date'>
                             <span class="input-group-addon">
@@ -50,7 +50,16 @@
                             </div>
                         </div>
                         <div class="form-group col-md-2">
-                                <button type="submit" class="btn btn-m" name="checkbutton"> Check </button>
+                            Type :
+                            <select name="bookingtype" class="form-control">
+                                <option value="hotelroom">Hotel Room </option>
+                                <option value="meeetingroom">Meeting Room</option>
+                            </select>
+                               
+                                
+                            </div>
+                        <div class="form-group col-md-2">
+                                <button type="submit" class="btn btn-m" name="checkroom"> Check Rooms </button>
                         </div>
                     </form>
             </div>
@@ -61,13 +70,13 @@
                         <h3 class="section-sub-subheading text-muted">Check Your Booking</h3>
                     </div>
             
-                    <div class="form-group col-sm-offset-3 col-sm-4">
-                        Booking No. :
-                        <input type="text" class="form-control" id="bookingno"/>
+                    <div class="form-group col-sm-offset-3 col-sm-3">
+                        Booking No :
+                        <input type="text" class="form-control" name="bookingno"/>
                     </div>
                     
-                    <div class="form-group col-sm-2">
-                            <input type="button" class="btn btn-m" value="See My Booking" />
+                    <div class="form-group col-sm-3">
+                            <button type="submit" name="seebooking" class="btn btn-m"> See My Booking </button>
                     </div>
                 </form>
             </div>
@@ -77,20 +86,20 @@
                     <div class="col-sm-12 text-center">
                         <h3 class="section-sub-subheading text-muted">Confirm My Payment</h3>
                     </div>
-                    <div class="form-group col-sm-4">
+                    <div class="form-group col-sm-offset-1 col-sm-3">
                         Booking No. :
-                        <input type="text" class="form-control" id="bookingno"/>
+                        <input type="text" class="form-control" name="bookingno"/>
                     </div>
-                    <div class="form-group col-sm-3">
+                    <div class="form-group col-sm-2">
                         Jenis Pembayaran :
-                        <input type="text" class="form-control" id="bookingno"/>
+                        <input type="text" class="form-control" name="paymenttype"/>
                     </div>
                     <div class="form-group col-sm-3">
                         Nominal :
-                        <input type="text" class="form-control" id="bookingno"/>
+                        <input type="text" class="form-control" name="nominal"/>
                     </div>
                     <div class="form-group col-sm-2">
-                            <input type="button" class="btn btn-m" value="Confirm Payment" />
+                            <button type="submit" class="btn btn-m"> Confirm Payment </button>
                     </div>
                 </form>
             </div>

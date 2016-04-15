@@ -9,7 +9,7 @@
 	</div>
 	<div class="row">
 		<form name="checkavailability" action="result.php" method="get">
-                    <div class="form-group col-md-offset-2 col-md-3">
+                    <div class="form-group col-md-offset-1 col-md-3">
                         Check In :
                         <div class='input-group date'>
                             <span class="input-group-addon">
@@ -32,9 +32,18 @@
                             </div>
                         </div>
                         <div class="form-group col-md-2">
-                                <button type="submit" class="btn btn-m" name="checkbutton"> Check </button>
+                            Type :
+                            <select name="bookingtype" class="form-control">
+                                <option value="hotelroom">Hotel Room </option>
+                                <option value="meeetingroom">Meeting Room</option>
+                            </select>
+                               
+                                
+                            </div>
+                        <div class="form-group col-md-2">
+                                <button type="submit" class="btn btn-m" name="checkroom"> Check Rooms </button>
                         </div>
-        </form>
+                    </form>
     </div>
     <hr>
     <?php

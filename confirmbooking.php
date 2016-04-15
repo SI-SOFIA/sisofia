@@ -9,7 +9,7 @@
 	<div class="row">
 	
 	<div class="col-sm-offset-3 col-sm-6 bg-fade-orange side-box">
-		
+			
 			<p class="large text-muted"> Your Booking </p>
 			<img src="img/portfolio/treehouse.png" class="img-responsive" alt="">
 			<p class="large">Room Name</p>
