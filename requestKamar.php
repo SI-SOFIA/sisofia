@@ -29,14 +29,25 @@
 	    	$jenisKamar = ucfirst($jenisKamar);
 	    	$hargaKamar = number_format($hargaKamar, 0, ',', '.');
 
+	    	$imgsrc = "http://blog.laterooms.com/wp-content/uploads/2011/10/LuxuryUpgrade.jpg";
+
+	    	$description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia minuti firme desperantes vix sempiternum sentiri possunt, philosophia permanentes, sentit careret.";
+
 			echo '<form name="book" method="post" action="processbooking.php">';
 	    	echo '<div class="row">';
 	    		echo '<div class="col-sm-3">';
-	    			echo '<img src="http://blog.laterooms.com/wp-content/uploads/2011/10/LuxuryUpgrade.jpg" width="240" height="150">';
+	    			echo '<img src="'.$imgsrc.'" width="240" height="150">';
 	    		echo '</div>';
 	    		echo '<div class="col-sm-4">';
+
+	    			echo '<input type="text" value="'.$row["id_ruangan"].'" style="display:none;" name="idRuangan">';
+	    			echo '<input type="text" value="'.$jenisKamar.'" style="display:none;" name="jenisRuangan">';
+	    			echo '<input type="text" value="'.$description.'" style="display:none;" name="deskripsi">';
+	    			echo '<input type="text" value="'.$hargaKamar.'" style="display:none;" name="hargaString">';
+	    			echo '<input type="text" value="'.$imgsrc.'" style="display:none;" name="imgsrc">';
+
 	    			echo '<p><label> '.$jenisKamar.' ( Room '.$row["id_ruangan"].' )</label></p>';
-	    			echo '<b>Description </b><br /> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia minuti firme desperantes vix sempiternum sentiri possunt, philosophia permanentes, sentit careret.';
+	    			echo '<b>Description </b><br /> '.$description;
 	    		echo '</div>';
 	    		echo '<div class="col-sm-3">';
 	    			//use jquery to update price

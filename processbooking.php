@@ -10,6 +10,7 @@
 	<div class="col-sm-7">
 		<p class="large text-muted"> Your Personal Detail </p>
 		<form name="personaldetail" method="post" action="confirmbooking.php">
+		<?php echo '<input type="text" value="'.$_POST["idRuangan"].'" style="display:none;" name="idRuangan">' ?>
 		<div class="row">
 			<div class="col-sm-6 form-group">
 				<label>First Name</label>
@@ -39,10 +40,10 @@
 	<div class="col-sm-offset-1 col-sm-4 bg-fade-orange side-box">
 		
 			<p class="large text-muted"> Your Booking </p>
-			<img src="img/portfolio/treehouse.png" class="img-responsive" alt="">
-			<p class="large">Room Name</p>
-			Description <br />
-			Price <br />
+			<img src="<?PHP echo $_POST["imgsrc"] ?>" class="img-responsive" alt="">
+			<p class="large"><?php echo $_POST["jenisRuangan"] . " ( Ruang " . $_POST["idRuangan"] . " )" ?></p>
+			<?php echo $_POST["deskripsi"] ?> <br />
+			<?php echo "Total : Rp " . $_POST["hargaString"] . ",-" ?> <br />
 
 
 		</div>
