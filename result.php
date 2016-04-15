@@ -46,29 +46,8 @@
                     </form>
     </div>
     <hr>
-    <?php
-    	//for each result
-    	echo '<form name="book" method="post" action="processbooking.php">';
-    	echo '<div class="row">';
-    		echo '<div class="col-sm-3">';
-    			echo 'Picture';
-    		echo '</div>';
-    		echo '<div class="col-sm-4">';
-    			echo 'Room Name <br />';
-    			echo 'Description <br />';
-    		echo '</div>';
-    		echo '<div class="col-sm-3">';
-    			//use jquery to update price
-    			echo 'Price <br />';
-    			echo 'Quantity <br />';
-    		echo '</div>';
-    		echo '<div class="col-sm-2">';
-    			//processbooking
-    			echo '<button type="submit" class="btn btn-m" name="book"> Book </button>';
-    		echo '</div>';
-    	echo '</div>';
-    	echo '</form>';
-    	echo '<hr>';
+    <?php 
+        include('requestKamar.php');
     ?>
 
 </div>
