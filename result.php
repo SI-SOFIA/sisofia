@@ -46,7 +46,7 @@
                     </form>
     </div>
     <hr>
-<<<<<<< HEAD
+
     <?php
     	//for each result
     	echo '<form name="book" method="post" action="processbooking.php">';
