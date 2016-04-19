@@ -796,3 +796,6 @@ body {
 .padding-20 {
     padding:15px;
 }
+.uppercase {
+  text-transform: uppercase;
+}

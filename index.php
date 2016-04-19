@@ -33,7 +33,7 @@
                             <span class="input-group-addon">
                                 <span class="fa fa-calendar"></span>
                             </span>
-                            <input type="date" class="form-control" name="checkindate"/>
+                            <input type="date" class="form-control" name="checkindate" value="<?php echo date('Y-m-d'); ?>" required/>
                         
                         </div>
                     </div>
@@ -45,13 +45,13 @@
                                  <span class="input-group-addon">
                                     <span class="fa fa-calendar"></span>
                                 </span>
-                                <input type="date" class="form-control" name="checkoutdate" />
+                                <input type="date" class="form-control" name="checkoutdate"  value="<?php echo date('Y-m-d'); ?>" required/>
                                 
                             </div>
                         </div>
                         <div class="form-group col-md-2">
                             Type :
-                            <select name="bookingtype" class="form-control">
+                            <select name="bookingtype" class="form-control" required>
                                 <option value="hotelroom">Hotel Room </option>
                                 <option value="meeetingroom">Meeting Room</option>
                             </select>
@@ -59,7 +59,7 @@
                                 
                             </div>
                         <div class="form-group col-md-2">
-                                <button type="submit" class="btn btn-m" name="checkroom"> Check Rooms </button>
+                                <button type="submit" class="btn btn-m"> Check Rooms </button>
                         </div>
                     </form>
             </div>
@@ -72,7 +72,7 @@
             
                     <div class="form-group col-sm-offset-3 col-sm-3">
                         Booking No :
-                        <input type="text" class="form-control" name="bookingno"/>
+                        <input type="text" class="form-control" name="bookingno" required/>
                     </div>
                     
                     <div class="form-group col-sm-3">
@@ -88,15 +88,15 @@
                     </div>
                     <div class="form-group col-sm-offset-1 col-sm-3">
                         Booking No. :
-                        <input type="text" class="form-control" name="bookingno"/>
+                        <input type="text" class="form-control" name="bookingno" required/>
                     </div>
                     <div class="form-group col-sm-2">
                         Jenis Pembayaran :
-                        <input type="text" class="form-control" name="paymenttype"/>
+                        <input type="text" class="form-control" name="paymenttype" required/>
                     </div>
                     <div class="form-group col-sm-3">
                         Nominal :
-                        <input type="text" class="form-control" name="nominal"/>
+                        <input type="text" class="form-control" name="nominal" required/>
                     </div>
                     <div class="form-group col-sm-2">
                             <button type="submit" class="btn btn-m"> Confirm Payment </button>
