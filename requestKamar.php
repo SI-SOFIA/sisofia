@@ -1,7 +1,7 @@
 <?php
 
 	include('database.php');
-
+	//TODO: RANGE WAKTU MASIH SALAH
 	$sql = "SELECT jenis_kamar, harga_kamar, COUNT(id_ruangan) as jumlah FROM kamar WHERE id_ruangan NOT IN(SELECT alokasi.id_ruangan FROM booking JOIN alokasi ON alokasi.id_booking = booking.id WHERE (status = 'paid' OR status = 'pending') AND ((booking.tanggal_checkin <= '".$_GET["checkindate"]."') AND (booking.tanggal_checkout >= '".$_GET["checkoutdate"]." 00:00:00'))) GROUP BY jenis_kamar  ORDER BY harga_kamar DESC;";
 	$result = $conn->query($sql);
 

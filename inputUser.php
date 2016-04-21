@@ -8,23 +8,14 @@
 	VALUES ('". $_POST["namaDepanUser"] ." ". $_POST["namaBelakangUser"] ."', '". $_POST["addressUser"] ."', '". $_POST["emailUser"] ."','". $_POST["phoneUser"] ."')";
 
 	if ($conn->query($sql) === TRUE) {
-		//Do Something Right
+		$IDPelanggandb = $conn->insert_id;
+		
 	} else {
 	    //Do Something Wrong
 	    echo "Failed to receive your data";
 	}
 
-	$sql = "SELECT * FROM pelanggan WHERE email = '".$_POST["emailUser"]."'";
-	$result = $conn->query($sql);
 
-	if ($result->num_rows > 0) {
-	    // output data of each row
-	    while($row = $result->fetch_assoc()) {
-	    	$IDPelanggandb = $row["id"];
-	    }
-	} else {
-
-	}
 
 	include('closedatabase.php');
 

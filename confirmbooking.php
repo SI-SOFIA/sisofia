@@ -1,7 +1,6 @@
 <?php include('head.php'); ?>
 <?php include('minimalnavigation.php'); ?>
-<?php include('inputUser.php'); 
-	  include('inputBooking.php'); ?>
+<?php include('inputUser.php'); ?>
 <div class="container">
 	<div class="text-center">
 	<hr><hr><hr>
@@ -12,55 +11,52 @@
 	
 
 	<div class="col-sm-offset-3 col-sm-6 bg-fade-orange center-box">
+	<?php
+			echo '<table class="table-condensed">';
+			echo '<tr>';
+				echo '<td> <b>Name</b> </td>';
+				echo '<td> : </td>';
+				echo '<td> '. $_POST["namaDepanUser"]. ' '. $_POST["namaBelakangUser"] .' </td>';
+			echo '</tr>';
+			echo '<tr>';
+				echo'<td> <b>Telephone</b> </td>';
+				echo '<td> : </td>';
+				echo '<td> '. $_POST["phoneUser"] .' </td>';
+			echo '</tr>';
+			echo '<tr>';
+				echo '<td> <b>Address</b> </td>';
+				echo '<td> : </td>';
+				echo '<td> '. $_POST["addressUser"] .'</td>';
+			echo '</tr>';
+			echo '<tr>';
+				echo '<td colspan=2> <b>Booking Detail </b></td>';
+				echo '<td> : </td>';
+			echo '</tr>';
+			echo '</table>';
 
-			<table class="table-condensed">
-			<tr>
-				<td> <b>Name</b> </td>
-				<td> : </td>
-				<td> Jessica Handayani </td>
-			</tr>
-			<tr>
-				<td> <b>Telephone</b> </td>
-				<td> : </td>
-				<td> +6281287156165 </td>
-			</tr>
-			<tr>
-				<td> <b>Address</b> </td>
-				<td> : </td>
-				<td> Jalan Cisitu Indah V </td>
-			</tr>
-			<tr>
-				<td> <b>Booking Detail </b></td>
-				<td> : </td>
-				<td>  </td>
-			</tr>
-			</table>
-
-			<img src="img/room/single.png" class="img-responsive" alt="">
-			<br /><b>Room Type : Single </b>
-			<br /> <br /> <b>Description </b><br /> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia minuti firme desperantes vix sempiternum sentiri possunt, philosophia permanentes, sentit careret.
-			<br /><br /><b>Quantity</b> : 1 <br />
-			<br /><b>Check in</b> : 04/17/2016 <br />
-			<br /><b>Check out</b> : 04/20/2016 <br />
-			<hr>
-			<h3>TOTAL : Rp 600.000,- </h3><br />
-
-
-	<div class="col-sm-offset-3 col-sm-6 bg-fade-orange side-box">
-			
-			<p class="large text-muted"> Hi <?php echo $_POST["namaDepanUser"] ?>, This is your booking </p>
-			<img src="<?php echo $_POST["imgsrc"] ?>" class="img-responsive" alt="" height="300" width="480">
-			<p class="large"><?php echo $_POST["jenisRuangan"] . " ( Ruang " . $_POST["idRuangan"] . " )" ?></p>
-			<?php echo $_POST["deskripsi"] ?> <br />
-			Rp <?php echo $_POST["hargaString"] ?>,- <br />
+			echo '<img src="'.$_POST["imgsrc"].'" class="img-responsive" alt="">';
+			echo '<br /><b>Room Type : '. ucfirst($_POST["jenisRuangan"]) .'</b>';
+			echo '<br /> <br /> <b>Description </b><br /> '.$_POST["deskripsi"];
+			echo '<br /><br /><b>Quantity</b> : '.$_POST["quantity"].'<br />';
+			echo '<br /><b>Check in</b> : '.$_POST["checkin"].' <br />';
+			echo '<br /><b>Check out</b> : '.$_POST["checkout"].' <br />';
+			echo '<hr>';
+			echo '<h3>TOTAL : Rp '. $_POST["totalhargastring"] .',- </h3><br />';
+	?>
 
 
+			<form name="confirmBooking" method="post" action="inputBooking.php">
+				<?php
 
-			<button type="submit" name="register" class="btn btn-m">Confirm My Booking</button>
-
-			<form>
-				<?php echo '<input type="text" value="'.$_POST["idRuangan"].'" style="display:none;" name="idRuangan">' ?>
-				<button type="submit" name="register" class="btn btn-m">Confirm My Booking</button>
+				echo '<input type="text" value="'.$IDPelanggandb.'" style="display:none;" name="idpelanggan">';
+				echo '<input type="text" value="'.$_POST["jenisRuangan"].'" style="display:none;" name="jenisRuangan">';
+				echo '<input type="text" value="'.$_POST["quantity"].'" style="display:none;" name="quantity">';
+				echo '<input type="text" value="'.$_POST["checkin"].'" style="display:none;" name="checkin">';
+				echo '<input type="text" value="'.$_POST["checkout"].'" style="display:none;" name="checkout">';
+				echo '<input type="text" value="'.$_POST["totalharga"].'" style="display:none;" name="totalharga">';
+				
+				?>
+				<button type="submit" class="btn btn-m">Confirm My Booking</button>
 			</form>
 		</div>
 	</div>
