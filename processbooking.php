@@ -13,14 +13,15 @@
 		<?php
 			echo '<input type="text" value="'.$_POST["jenisRuangan"].'" style="display:none;" name="jenisRuangan">'; 
 			echo '<input type="text" value="'.$_POST["deskripsi"].'" style="display:none;" name="deskripsi">';
-			echo '<input type="text" value="'.$_POST["hargaString"].'" style="display:none;" name="hargaString">';
 			echo '<input type="text" value="'.$_POST["imgsrc"].'" style="display:none;" name="imgsrc">';
-			echo '<input type="text" value="'.$_POST["hargaFloat"].'" style="display:none;" name="hargaFloat">';
 			echo '<input type="text" value="'.$_POST["checkin"].'" style="display:none;" name="checkin">';
 			echo '<input type="text" value="'.$_POST["checkout"].'" style="display:none;" name="checkout">'; 
 			echo '<input type="text" value="'.$_POST["quantity"].'" style="display:none;" name="quantity">';
 			$days = (strtotime($_POST["checkout"]) - strtotime($_POST["checkin"])) / (60 * 60 * 24);
 			$totalharga = ($_POST["quantity"] * $days * $_POST["hargaFloat"]);
+			$totalhargastring = number_format($totalharga, 0, ',', '.');
+			echo '<input type="text" value="'.$totalharga.'" style="display:none;" name="totalharga">';
+			echo '<input type="text" value="'.$totalhargastring.'" style="display:none;" name="totalhargastring">';
 		?>
 		<div class="row">
 			<div class="col-sm-6 form-group">
@@ -59,7 +60,7 @@
 			echo '<br /><b>Check in</b> : '.$_POST["checkin"].'<br />';
 			echo '<br /><b>Check out</b> : '.$_POST["checkout"].'<br />';
 			echo '<hr>';
-			echo '<h3>TOTAL : Rp '.number_format($totalharga, 0, ',', '.').',- </h3><br />';
+			echo '<h3>TOTAL : Rp '.$totalhargastring.',- </h3><br />';
 
 		?>
 
