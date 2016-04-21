@@ -29,9 +29,8 @@
 				echo '<td> '. $_POST["addressUser"] .'</td>';
 			echo '</tr>';
 			echo '<tr>';
-				echo '<td> <b>Booking Detail </b></td>';
+				echo '<td colspan=2> <b>Booking Detail </b></td>';
 				echo '<td> : </td>';
-				echo '<td>  </td>';
 			echo '</tr>';
 			echo '</table>';
 
