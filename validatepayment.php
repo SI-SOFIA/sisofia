@@ -2,7 +2,7 @@
 <?php include('minimalnavigation.php'); ?>
 <?php
 	$connect = mysql_connect("localhost","root","") or die ("Connection Error");
-	$selectdb = mysql_select_db("sofia", $connect);
+	$selectdb = mysql_select_db("sisofia", $connect);
 ?>
 <div class="container">
 	<div class="text-center">

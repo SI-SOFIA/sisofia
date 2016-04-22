@@ -1,4 +1,3 @@
-<?php //include='database.php' ?>
 <?php
 
 	/*
@@ -8,44 +7,23 @@
 
 	$sql = "SELECT * FROM booking JOIN pelanggan ON booking.id_pelanggan = pelanggan.id WHERE booking.id = ".$_GET["bookingno"];
 	$result = $conn->query($sql);
-
+	$bookingno = $_GET["bookingno"];
 	if ($result->num_rows > 0) {
 	    // output data of each row
 	    $row = $result->fetch_assoc();
-
     	$nama = $row["nama"];
     	$noTelepon = $row["nomor_hp"];
     	$alamat = $row["alamat"];
     	$status = $row["status"];
+    	$quantity = $row["jumlah"];
+    	$jenisKamar = $row["jenis"];
+    	$imgsrc = "img/room/".$jenisKamar.".png";
+    	$checkin = $row["tanggal_checkin"];
+    	$checkout = $row["tanggal_checkout"];
+    	$totalharga = $row["total_harga"];
+    	
 
-    	//$jenisKamar = ucfirst($jenisKamar);
-    	//$hargaKamar = number_format($hargaKamar, 0, ',', '.');
-
-    	echo '<table class="table-condensed">
-		<tr>
-			<td> Name </td>
-			<td> : </td>
-			<td> '.$nama;
-		echo' </td>
-		</tr>
-		<tr>
-			<td> Telephone </td>
-			<td> : </td>
-			<td> '.$noTelepon;
-		echo' </td>
-		</tr>
-		<tr>
-			<td> Address </td>
-			<td> : </td>
-			<td> '.$alamat;
-		echo' </td>
-		</tr>
-		<tr>
-			<td> Booking Detail </td>
-			<td> : </td>
-			<td> '.$status;
-
-		if ($status != 'cancel') {
+		/*if ($status != 'cancel') {
 			$sql = "SELECT * FROM kamar WHERE id_ruangan IN(SELECT alokasi.id_ruangan FROM alokasi WHERE id_booking = ".$_GET["bookingno"].")";
 			$result = $conn->query($sql);
 			$row = $result->fetch_assoc();
@@ -99,12 +77,11 @@
 			</table>
 
 			</div>';
-		}
+		}*/
 	} else {
 	    echo "0 results";
 	}
 
 	include('closedatabase.php');
 
-?>
-<?php //include='closedatabase.php' ?>
+ //include='closedatabase.php' ?>
