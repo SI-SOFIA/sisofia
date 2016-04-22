@@ -53,7 +53,7 @@
                             Type :
                             <select name="bookingtype" class="form-control" required>
                                 <option value="hotelroom">Hotel Room </option>
-                                <option value="meeetingroom">Meeting Room</option>
+                                <option value="meetingroom">Meeting Room</option>
                             </select>
                                
                                 
@@ -65,7 +65,7 @@
             </div>
             <hr>
             <div class="row">
-                <form name="bookingdetail" action="bookingdetail.php" method="get">
+                <form name="bookingdetail" action="bookingdetail.php" method="post">
                     <div class="col-sm-12 text-center">
                         <h3 class="section-sub-subheading text-muted">Check Your Booking</h3>
                     </div>
@@ -96,7 +96,7 @@
                     </div>
                     <div class="form-group col-sm-3">
                         Nominal :
-                        <input type="text" class="form-control" name="nominal" required/>
+                        <input type="text" class="form-control" name="nominal" required3/>
                     </div>
                     <div class="form-group col-sm-2">
                             <button type="submit" class="btn btn-m"> Confirm Payment </button>
