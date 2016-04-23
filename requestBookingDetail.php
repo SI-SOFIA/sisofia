@@ -5,9 +5,9 @@
 	*/
 	include('database.php');
 
-	$sql = "SELECT * FROM booking JOIN pelanggan ON booking.id_pelanggan = pelanggan.id WHERE booking.id = ".$_GET["bookingno"];
+	$sql = "SELECT * FROM booking JOIN pelanggan ON booking.id_pelanggan = pelanggan.id WHERE booking.id = ".$_GET["seebookingno"];
 	$result = $conn->query($sql);
-	$bookingno = $_GET["bookingno"];
+	$bookingno = $_GET["seebookingno"];
 	if ($result->num_rows > 0) {
 	    // output data of each row
 	    $row = $result->fetch_assoc();

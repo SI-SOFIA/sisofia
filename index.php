@@ -65,14 +65,14 @@
             </div>
             <hr>
             <div class="row">
-                <form name="bookingdetail" action="bookingdetail.php" method="post">
+                <form name="bookingdetail" action="bookingdetail.php" method="get">
                     <div class="col-sm-12 text-center">
                         <h3 class="section-sub-subheading text-muted">Check Your Booking</h3>
                     </div>
             
                     <div class="form-group col-sm-offset-3 col-sm-3">
                         Booking No :
-                        <input type="text" class="form-control" name="bookingno" required/>
+                        <input type="text" class="form-control" name="seebookingno" required/>
                     </div>
                     
                     <div class="form-group col-sm-3">

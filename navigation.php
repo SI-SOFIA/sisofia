@@ -18,7 +18,7 @@
                     <a href="#page-top"></a>
                 </li>
                 <li>
-                    <a href="">Home</a>
+                    <a href="index.php">Home</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="#booknow">Booking</a>

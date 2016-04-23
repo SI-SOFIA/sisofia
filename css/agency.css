@@ -258,6 +258,11 @@ fieldset[disabled] .btn-m.active {
     font-size: 2em;
   }
 }
+
+.bg2{
+  background-image: url('../img/header-blur.jpg') !important;
+}
+
 header {
   background-image: url('../img/header-bg.jpg');
   background-repeat: none;
@@ -270,6 +275,7 @@ header {
   text-align: center;
   color: white;
 }
+
 header .intro-text {
   padding-top: 100px;
   padding-bottom: 50px;
