@@ -35,13 +35,13 @@
                             Type :
                             <select name="bookingtype" class="form-control">
                                 <option value="hotelroom">Hotel Room </option>
-                                <option value="meeetingroom">Meeting Room</option>
+                                <option value="meetingroom">Meeting Room</option>
                             </select>
                                
                                 
                             </div>
                         <div class="form-group col-md-2">
-                                <button type="submit" class="btn btn-m" name="checkroom"> Check Rooms </button>
+                                <button type="submit" class="btn btn-m"> Check Rooms </button>
                         </div>
                     </form>
     </div>

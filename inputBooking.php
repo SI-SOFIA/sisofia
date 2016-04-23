@@ -7,6 +7,21 @@
 	if ($conn->query($sql) === TRUE) {
 		//Do Something Right
 		$idbooking = $conn->insert_id;
+		if ($_POST["jenisRuangan"] == 'single' || $_POST["jenisRuangan"] == 'executive' || $_POST["jenisRuangan"] == 'double')
+			$query = "SELECT * FROM kamar WHERE jenis_kamar='".$_POST["jenisRuangan"]."' AND id_ruangan NOT IN(SELECT alokasi.id_ruangan FROM booking JOIN alokasi ON alokasi.id_booking = booking.id WHERE (status = 'paid' OR status = 'pending') AND ((booking.tanggal_checkin <= '".$_POST["checkin"]."') AND (booking.tanggal_checkout >= '".$_POST["checkout"]."'))) LIMIT ". $_POST["quantity"];
+		else
+			$query = "SELECT * FROM ruang_pertemuan WHERE id_ruangan NOT IN(SELECT alokasi.id_ruangan FROM booking JOIN alokasi ON alokasi.id_booking = booking.id WHERE (status = 'paid' OR status = 'pending') AND ((booking.tanggal_checkin <= '".$_POST["checkin"]."') AND (booking.tanggal_checkout >= '".$_POST["checkout"]."'))) LIMIT 1";
+		
+
+		$execute = $conn->query($query);
+
+		if ($execute->num_rows >0){
+	    // output data of each row
+		    while($row = $execute->fetch_assoc()) {
+				$insert = "INSERT INTO alokasi (id_booking, id_ruangan) VALUES (".$idbooking.", ".$row["id_ruangan"].")";
+				$alocate = $conn->query($insert);
+			}
+		}
 		include('head.php');
 		include('minimalnavigation.php');
 		echo '<div class="container">
